@@ -18,11 +18,10 @@ export default function NavBar() {
         </Menu.Item>
         <Menu.Item name="Events" as={NavLink} to="/events" />
         <Menu.Item name="Sanbox" as={NavLink} to="/sandbox" />
-        {
-          authenticated && ( 
-        <Menu.Item as={NavLink} to="/createEvent">
-          <Button as={NavLink} to='/createEvent' positive inverted content="Create Event" />
-        </Menu.Item> 
+        {authenticated && (
+          <Menu.Item as={NavLink} to='/createEvent'>
+            <Button positive inverted content='Create Event' />
+          </Menu.Item>
         )}
         {
           authenticated ? <SignedInMenu  /> : <SignedOutMenu  />
